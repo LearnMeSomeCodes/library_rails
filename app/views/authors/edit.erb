@@ -1,0 +1,31 @@
+<h1>Edit Author</h1>
+
+<% if @author.errors.any? %>
+There were some errors!
+<ul>
+  <% @author.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+
+
+<%= form_for(@author) do |f| %>
+
+<%= f.label      :first_name %>
+<%= f.text_field :first_name %>
+
+<%= f.label      :last_name %>
+<%= f.text_field :last_name %>
+
+
+<%= f.label      :nationality %>
+<%= f.text_field :nationality %>
+
+<%= f.label        :birth_year %>
+<%= f.number_field :birth_year %>
+
+<%= f.submit :submit %>
+
+<% end %>
