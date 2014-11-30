@@ -15,5 +15,10 @@
   <%= link_to @book.author_name, @book.author %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<br />
+
+<ul>
+  <li><%= link_to 'Edit this book', edit_book_path(@book) %></li>
+  <li><%= link_to "Back to index",  books_path %></li>
+</ul>
+
