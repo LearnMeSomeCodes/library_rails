@@ -1,3 +1,5 @@
+<h3>Show Author</h3>
+
 <p>
   <strong>First name:</strong>
   <%= @author.first_name %>
@@ -17,6 +19,25 @@
   <strong>Nationality:</strong>
   <%= @author.nationality %>
 </p>
+
+
+<p>
+  <strong>Books written by this author:</strong>
+</p>
+
+<% if @author.books.any? %>
+  <ul>
+    <% @author.books.each do |b| %>
+      <li><%= link_to b.title, b %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>
+    This author hasn't written any books.
+    Are they really an author?
+  </p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
