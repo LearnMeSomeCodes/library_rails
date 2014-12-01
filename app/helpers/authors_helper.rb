@@ -1,6 +1,8 @@
 module AuthorsHelper
 
   def authors_table(authors)
-    render partial: 'authors_table', locals: {authors: authors}
+    if authors.any?
+      render partial: 'authors_table', locals: {authors: authors}
+    end
   end
 end
