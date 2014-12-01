@@ -1,14 +1,22 @@
 <%= form_for(@book) do |f| %>
 
-  <%= f.label      :title %>
-  <%= f.text_field :title %>
+  <div class="field" >
+    <%= f.label      :title %>
+    <%= f.text_field :title %>
+  </div>
 
-  <%= f.label        :publication_date %>
-  <%= f.number_field :publication_date %>
+  <div class="field" >
+    <%= f.label        :publication_date %>
+    <%= f.number_field :publication_date %>
+  </div>
 
-  <%= f.label :author_id, "Author" %>
-  <%= f.collection_select :author_id, Author.all, :id, :full_name, include_blank: true %>
+  <div class="field" >
+    <%= f.label :author_id, "Author" %>
+    <%= f.collection_select :author_id, Author.all, :id, :full_name, include_blank: true %>
+  </div>
 
-  <%= f.submit :submit %>
+  <div class="field" >
+    <%= f.submit :submit %>
+  </div>
 
 <% end %>
