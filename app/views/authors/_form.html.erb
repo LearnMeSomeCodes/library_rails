@@ -1,16 +1,24 @@
 <%= form_for(@author) do |f| %>
 
-  <%= f.label      :first_name %>
-  <%= f.text_field :first_name %>
+  <div class="field" >
+    <%= f.label      :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
 
-  <%= f.label      :last_name %>
-  <%= f.text_field :last_name %>
+  <div class="field" >
+    <%= f.label      :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
 
-  <%= f.label      :nationality %>
-  <%= f.text_field :nationality %>
+  <div class="field" >
+    <%= f.label      :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
 
-  <%= f.label        :birth_year %>
-  <%= f.number_field :birth_year %>
+  <div class="field" >
+    <%= f.label        :birth_year %>
+    <%= f.number_field :birth_year %>
+  </div>
 
   <%= f.submit :submit %>
 
