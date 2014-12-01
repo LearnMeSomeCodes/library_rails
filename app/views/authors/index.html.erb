@@ -17,9 +17,7 @@
   </thead>
 
   <tbody>
-    <% @authors.each do |author| %>
-      <%= render partial: "author_row", object: author %>
-    <% end %>
+    <%= render partial: "author_row", collection: @authors %>
   </tbody>
 </table>
 
