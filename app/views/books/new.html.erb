@@ -1,3 +1,9 @@
+<% content_for :page_nav do %>
+  <ul>
+    <li><%= link_to "Back to index", books_path %></li>
+  </ul>
+<% end %>
+
 <h1>New Book</h1>
 
 <% if @book.errors.any? %>
@@ -11,10 +17,3 @@
 
 
 <%= render "form" %>
-
-
-<hr />
-
-<ul>
-  <li><%= link_to "Back to index", books_path %></li>
-</ul>

@@ -1,3 +1,10 @@
+<% content_for :page_nav do %>
+  <ul>
+    <li><%= link_to 'Edit this book', edit_book_path(@book) %></li>
+    <li><%= link_to "Back to index",  books_path %></li>
+  </ul>
+<% end %>
+
 <h3>Book Details</h3>
 
 <p>
@@ -15,10 +22,4 @@
   <%= link_to @book.author_name, @book.author %>
 </p>
 
-<hr />
-
-<ul>
-  <li><%= link_to 'Edit this book', edit_book_path(@book) %></li>
-  <li><%= link_to "Back to index",  books_path %></li>
-</ul>
 

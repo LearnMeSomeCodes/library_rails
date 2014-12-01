@@ -15,5 +15,10 @@
 
 <%= yield %>
 
+<% if content_for? :page_nav %>
+  <hr />
+  <%= yield :page_nav %>
+<% end %>
+
 </body>
 </html>

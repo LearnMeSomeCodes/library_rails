@@ -1,3 +1,9 @@
+<% content_for :page_nav do %>
+  <ul>
+    <li><%= link_to 'New book', new_book_path %></li>
+  </ul>
+<% end %>
+
 <h1>Listing books</h1>
 
 <table>
@@ -23,9 +29,3 @@
     <% end %>
   </tbody>
 </table>
-
-<hr />
-
-<ul>
-  <li><%= link_to 'New book', new_book_path %></li>
-</ul>

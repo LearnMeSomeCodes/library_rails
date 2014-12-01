@@ -1,3 +1,11 @@
+<% content_for :page_nav do %>
+  <ul>
+    <li><%= link_to 'Edit this author', edit_author_path(@author) %></li>
+    <li><%= link_to "Back to index", authors_path %></li>
+  </ul>
+<% end %>
+
+
 <h3>Author Details</h3>
 
 <p>
@@ -38,10 +46,3 @@
   </p>
 <% end %>
 
-
-<hr />
-
-<ul>
-  <li><%= link_to 'Edit this author', edit_author_path(@author) %></li>
-  <li><%= link_to "Back to index", authors_path %></li>
-</ul>

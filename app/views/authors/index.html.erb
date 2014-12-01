@@ -1,9 +1,12 @@
+<% content_for :page_nav do %>
+  <ul>
+    <li><%= link_to 'New author', new_author_path %></li>
+  </ul>
+<% end %>
+
+
+
+
 <h1>Listing authors</h1>
 
 <%= authors_table(@authors) %>
-
-<hr />
-
-<ul>
-  <li><%= link_to 'New author', new_author_path %></li>
-</ul>
