@@ -1,9 +1,9 @@
 <tr>
-  <td><%= author.first_name %></td>
-  <td><%= author.last_name %></td>
-  <td><%= author.birth_year %></td>
-  <td><%= author.nationality %></td>
-  <td><%= link_to 'Show', author %></td>
-  <td><%= link_to 'Edit', edit_author_path(author) %></td>
-  <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= author_row.first_name %></td>
+  <td><%= author_row.last_name %></td>
+  <td><%= author_row.birth_year %></td>
+  <td><%= author_row.nationality %></td>
+  <td><%= link_to 'Show', author_row %></td>
+  <td><%= link_to 'Edit', edit_author_path(author_row) %></td>
+  <td><%= link_to 'Destroy', author_row, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
