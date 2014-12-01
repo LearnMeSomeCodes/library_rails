@@ -15,20 +15,7 @@
 <% end %>
 
 
-<%= form_for(@book) do |f| %>
-
-  <%= f.label      :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label        :publication_date %>
-  <%= f.number_field :publication_date %>
-
-  <%= f.label :author_id, "Author" %>
-  <%= f.collection_select :author_id, Author.all, :id, :full_name, include_blank: true %>
-
-  <%= f.submit :submit %>
-
-<% end %>
+<%= render "form" %>
 
 
 <hr />
