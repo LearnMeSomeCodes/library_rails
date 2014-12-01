@@ -1,4 +1,5 @@
 <%= form_for(@author) do |f| %>
+  <%= render_model_errors(@author) %>
 
   <div class="field" >
     <%= f.label      :first_name %>

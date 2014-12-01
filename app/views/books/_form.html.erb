@@ -1,5 +1,7 @@
 <%= form_for(@book) do |f| %>
 
+  <%= render_model_errors(@book) %>
+
   <div class="field" >
     <%= f.label      :title %>
     <%= f.text_field :title %>

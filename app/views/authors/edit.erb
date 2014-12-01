@@ -9,13 +9,4 @@
 
 <h1>Edit Author</h1>
 
-<% if @author.errors.any? %>
-There were some errors!
-<ul>
-  <% @author.errors.full_messages.each do |error| %>
-  <li><%= error %></li>
-  <% end %>
-</ul>
-<% end %>
-
 <%= render "form" %>
