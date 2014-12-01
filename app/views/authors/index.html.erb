@@ -18,7 +18,7 @@
 
   <tbody>
     <% @authors.each do |author| %>
-      <%= render partial: "author_row", locals: {author: author} %>
+      <%= render partial: "author_row", object: author, as: :author %>
     <% end %>
   </tbody>
 </table>
