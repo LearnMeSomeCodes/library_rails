@@ -59,5 +59,8 @@ class AuthorsController < ApplicationController
     params.require(:author).permit(:first_name, :last_name, :nationality, :birth_year)
   end
 
+  def say_hello
+    "hello"
+  end
 
 end
