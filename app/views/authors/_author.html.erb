@@ -1,0 +1,37 @@
+<p>
+  <strong>First name:</strong>
+  <%= author.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= author.last_name %>
+</p>
+
+<p>
+  <strong>Birth year:</strong>
+  <%= author.birth_year %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= author.nationality %>
+</p>
+
+
+<p>
+  <strong>Books written by this author:</strong>
+</p>
+
+<% if author.books.any? %>
+  <ul>
+    <% author.books.each do |b| %>
+      <li><%= link_to b.title, b %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>
+    This author hasn't written any books.
+    Are they really an author?
+  </p>
+<% end %>
