@@ -1,0 +1,8 @@
+<tr>
+  <td><%= book_row.title %></td>
+  <td><%= book_row.publication_date %></td>
+  <td><%= book_row.author.first_name + " " + book_row.author.last_name %></td>
+  <td><%= link_to 'Show', book_row %></td>
+  <td><%= link_to 'Edit', edit_book_path(book_row) %></td>
+  <td><%= link_to 'Destroy', book_row, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
