@@ -1,3 +1,7 @@
+<div>
+  logged in as <%= current_user ? current_user.email : "nobody" %>
+</div>
+
 <%= link_to "Authors", authors_path %>
 <%= link_to "Books", books_path %>
 

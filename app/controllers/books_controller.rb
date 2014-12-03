@@ -45,6 +45,14 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
+  def favorite
+    book_to_fave = Book.find(params[:id])
+    if current_user
+      current_user.books << book_to_fave
+    end
+    redirect_to current_user
+  end
+
   private
   def book_params
     params.require(:book).permit(:title, :publication_date, :author_id)

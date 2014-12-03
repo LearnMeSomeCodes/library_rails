@@ -1,6 +1,7 @@
 class Book < ActiveRecord::Base
   belongs_to :author
-
+  has_and_belongs_to_many :users
+  
   validates :title, :publication_date, :author, presence: true
   validates :publication_date, numericality: true
   # Returns the full name of the book's author,
