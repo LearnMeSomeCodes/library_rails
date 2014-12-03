@@ -1,5 +1,4 @@
 class AuthorsController < ApplicationController
-  layout "resources"
 
   # GET /authors
   def index

@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
-  layout "resources"
-  
+
   # GET /books
   def index
     @books = Book.all
